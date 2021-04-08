@@ -1,0 +1,32 @@
+{
+  "id": "1ceb07ec-eec9-402e-8fd7-381e2a976b76",
+  "name": "Commission Management",
+  "publisher": "F1 Consulting & Services",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "0c9ad059-1879-4e25-b5a7-384b9e700de6",
+      "name": "GRC Parfum",
+      "publisher": "F1 Consulting & Services",
+      "version": "1.0.0.2"
+    }
+  ],
+  "screenshots": [],
+  "platform": "17.0.0.0",
+  "application": "17.0.0.0",
+  "idRanges": [
+    {
+      "from": 70100,
+      "to": 70149
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "6.0"
+}

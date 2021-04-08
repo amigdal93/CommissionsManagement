@@ -47,14 +47,13 @@ pageextension 70102 PagExtCustomerCard extends "Customer Card"
 
                 trigger OnAction()
                 var
-                    SalespersonsPag: Page "Salespersons List";
-                    SalespersonsTab: Record "Salespersons list";
+                    CommissionRateSpecPag: Page PagCommissionRateSpec;
+                    CommissionRateSpecTab: Record TabCommissionRateSpec;
                     Customer: Record Customer;
                 begin
-                    SalespersonsTab.SetCurrentKey("Customer No.");
-                    SalespersonsTab.SetRange("Customer No.", Rec."No.");
-                    SalespersonsPag.SetTableView(SalespersonsTab);
-                    Page.Run(Page::"Salespersons List", SalespersonsTab);
+                    CommissionRateSpecTab.SetRange("Customer No.", Rec."No.");
+                    CommissionRateSpecPag.SetTableView(CommissionRateSpecTab);
+                    Page.Run(Page::PagCommissionRateSpec, CommissionRateSpecTab);
                 end;
             }
         }

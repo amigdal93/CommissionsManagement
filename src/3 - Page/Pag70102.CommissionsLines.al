@@ -70,27 +70,8 @@ page 70102 "Commissions Lines"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
     var
         CUCommissionCalculation: Codeunit CommissionCalcSub;
-        SalesLine: Record "Sales Line";
-        Salesperson: Record "Salespersons list";
 
     trigger OnOpenPage()
     begin

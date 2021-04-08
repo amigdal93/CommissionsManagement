@@ -17,10 +17,24 @@ table 70103 TabCommissionRateSpec
         field(4; "Ship-to Code"; Code[10])
         {
             Caption = 'Ship-to Code';
+            TableRelation = "Ship-to Address".Code;
         }
         field(5; "Salesperson Code"; Code[20])
         {
             Caption = 'Salesperson Code';
+            TableRelation = "Salesperson/Purchaser".Code;
+
+            trigger OnValidate()
+            var
+                Salesperson: Record "Salesperson/Purchaser";
+            begin
+                Salesperson.Reset();
+                Salesperson.SetRange(Code, "Salesperson Code");
+                if Salesperson.FindSet() then begin
+                    "Salesperson Name" := Salesperson.Name;
+                    Salesperson.Modify();
+                end;
+            end;
         }
         field(6; "Entity Type"; Enum "Sales Line Type")
         {
@@ -29,7 +43,7 @@ table 70103 TabCommissionRateSpec
         }
         field(7; "Entity No."; Code[20])
         {
-            Caption = 'Entity No.';
+            Caption = 'No.';
             TableRelation = IF ("Entity Type" = CONST(" ")) "Standard Text"
             ELSE
             IF ("Entity Type" = CONST("G/L Account"))
@@ -147,9 +161,9 @@ table 70103 TabCommissionRateSpec
         {
             Caption = 'Maximum Commission';
         }
-        field(31; "Maximum Commission Time"; Enum "Maximum Commission Timeframe")
+        field(31; "Maximum Commission Timeframe"; Enum "Maximum Commission Timeframe")
         {
-            Caption = 'Maximum Commission Time';
+            Caption = 'Maximum Commission Timeframe';
         }
         field(32; "Commission Rate Type"; Enum "Commission Rate Type")
         {

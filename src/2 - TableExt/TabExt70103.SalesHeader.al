@@ -19,8 +19,8 @@ tableextension 70103 TabExtSalesHeader extends "Sales Header"
         Salespersonlist.SetRange("Customer No.", "Sell-to Customer No.");
         if Salespersonlist.FindSet() then begin
             Salespersonlist.SetCurrentKey("Customer No.");
-            PAGE.Run(50502, Salespersonlist);
-            //Page.RunModal(Page::"F1 - Salespersons List", Salespersonlist);
+            PAGE.Run(70701, Salespersonlist);
+            //Page.RunModal(Page::"Salespersons List", Salespersonlist);
         end;
     end;
 }

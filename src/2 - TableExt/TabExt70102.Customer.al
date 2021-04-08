@@ -18,10 +18,10 @@ tableextension 70102 TabExtCustomer extends Customer
         Salespersonlist.Reset();
         Salespersonlist.SetRange("Customer No.", "No.");
         if Salespersonlist.FindSet() then begin
-            PAGE.Run(50502, Salespersonlist);
+            PAGE.Run(70701, Salespersonlist);
             Salespersonlist.SetCurrentKey("Customer No.");
         end else begin
-            PAGE.Run(50502, Salespersonlist);
+            PAGE.Run(70701, Salespersonlist);
         end;
     end;
 }

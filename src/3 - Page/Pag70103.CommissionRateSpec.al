@@ -37,6 +37,21 @@ page 70103 PagCommissionRateSpec
                     ApplicationArea = All;
                     ToolTip = 'The salesperson receiving this commission';
                 }
+                field("Salesperson Name"; Rec."Salesperson Name")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the name of the salesperson';
+                }
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the Global Dimension 1 for the commission rate';
+                }
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the Global Dimension 2 for the commission rate';
+                }
                 field("Entity Type"; Rec."Entity Type")
                 {
                     ApplicationArea = All;
@@ -57,10 +72,54 @@ page 70103 PagCommissionRateSpec
                     ApplicationArea = All;
                     ToolTip = 'Specifies the end date of the original validity period of the commission';
                 }
+                field("Commission Type"; Rec."Commission Type")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the commission type for this rate';
+                }
+                field("Minimum Amount"; Rec."Minimum Amount")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies minimum amount for selected salesperson';
+                }
+                field("Recalculate Comm. Min. Amount"; Rec."Recalculate Comm. Min. Amount")
+                {
+                    ApplicationArea = All;
+                    Visible = false;
+                }
+                field("Commission Rate Type"; Rec."Commission Rate Type")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the type of the commission rate';
+                }
+                field("Generic Rate"; Rec."Generic Rate")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies if the commission rate should be added to all documents regardless of the salespeson being defined on the document.';
+                }
+                field("Initial Rate"; Rec."Initial Rate")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies if the commission rate should only be applied for the initial sale for a specific customer';
+                }
+                field("Maximum Commission"; Rec."Maximum Commission")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the maximum allowed commission for this commission specification during a specific time period';
+                }
+                field("Maximum Commission Timeframe"; Rec."Maximum Commission Timeframe")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the time period the amount specified in ''Maximum Commission'' is the maximum commission amount for this commission specification';
+                }
+                field("Replace Commission"; Rec."Replace Commission")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies whether the commissions are added to existing commissions or replaces existing commissions for transactions. This is only valid when ''Use only most specific'' is turned off in the setup.';
+                }
                 field("Commission %"; Rec."Commission %")
                 {
                     ApplicationArea = All;
-                    Visible = true;
                 }
                 field("Created by"; Rec."Created by")
                 {
@@ -87,41 +146,6 @@ page 70103 PagCommissionRateSpec
                     ApplicationArea = All;
                     Visible = false;
                 }
-                field("Salesperson Name"; Rec."Salesperson Name")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the name of the salesperson';
-                }
-                field("Generic Rate"; Rec."Generic Rate")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies if the commission rate should be added to all documents regardless of the salespeson being defined on the document.';
-                }
-                field("Initial Rate"; Rec."Initial Rate")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies if the commission rate should only be applied for the initial sale for a specific customer';
-                }
-                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the Global Dimension 1 for the commission rate';
-                }
-                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the Global Dimension 2 for the commission rate';
-                }
-                field("Commission Type"; Rec."Commission Type")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the commission type for this rate';
-                }
-                field("Replace Commission"; Rec."Replace Commission")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies whether the commissions are added to existing commissions or replaces existing commissions for transactions. This is only valid when ''Use only most specific'' is turned off in the setup.';
-                }
                 field("Recalculate Commissions"; Rec."Recalculate Commissions")
                 {
                     ApplicationArea = All;
@@ -132,45 +156,21 @@ page 70103 PagCommissionRateSpec
                     ApplicationArea = All;
                     Visible = false;
                 }
-                field("Recalculate Comm. Min. Amount"; Rec."Recalculate Comm. Min. Amount")
-                {
-                    ApplicationArea = All;
-                    Visible = false;
-                }
                 field("Recalc. Comm. Min. Amount Type"; Rec."Recalc. Comm. Min. Amount Type")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the type of the Minimum Amount';
+                    Visible = false;
                 }
                 // 20210408 AM - to decide which field to use in future
                 /* field("Amount Type"; Rec."Amount Type")
                 {
                     ApplicationArea = All;
                 } */
-                field("Minimum Amount"; Rec."Minimum Amount")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies minimum amount for selected salesperson';
-                }
                 field("Salesperson Group"; Rec."Salesperson Group")
                 {
                     ApplicationArea = All;
                     Visible = false;
-                }
-                field("Maximum Commission"; Rec."Maximum Commission")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the maximum allowed commission for this commission specification during a specific time period';
-                }
-                field("Maximum Commission Time"; Rec."Maximum Commission Time")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the time period the amount specified in ''Maximum Commission'' is the maximum commission amount for this commission specification';
-                }
-                field("Commission Rate Type"; Rec."Commission Rate Type")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the type of the commission rate';
                 }
                 field("Salesperson Enabled"; Rec."Salesperson Enabled")
                 {

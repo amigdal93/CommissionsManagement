@@ -40,22 +40,27 @@ page 70104 PagCommissionSplit
                 field("Start Date"; Rec."Start Date")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies the starting date of the salesperson commission assignment';
                 }
                 field("End Date"; Rec."End Date")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Specifies the ending date of the salesperson commission assignment';
                 }
                 field("Salesperson Code"; Rec."Salesperson Code")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The salesperson that will receive the commission';
                 }
                 field(Split; Rec.Split)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The percentage of the profit that this salesperson will receive';
                 }
                 field("Salesperson Name"; Rec."Salesperson Name")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The name of the salesperson';
                 }
                 field(Occurence; Rec.Occurence)
                 {

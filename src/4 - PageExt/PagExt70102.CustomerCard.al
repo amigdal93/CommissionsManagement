@@ -11,7 +11,8 @@ pageextension 70102 PagExtCustomerCard extends "Customer Card"
         {
             field(Salespersons; Rec.Salespersons)
             {
-                ApplicationArea = All;
+                Caption = 'Salesperson Code';
+                ApplicationArea = Basic, Suite;
 
                 trigger OnDrillDown()
                 begin

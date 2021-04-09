@@ -14,7 +14,7 @@ pageextension 70103 PagExtSalesInvoice extends "Sales Invoice"
 
                 trigger OnDrillDown()
                 begin
-                    Rec.OpenSalespersonListEntries();
+                    GenericCU.OpenSalespersonListEntries(Rec."Sell-to Customer No.");
                 end;
             }
         }
@@ -47,6 +47,7 @@ pageextension 70103 PagExtSalesInvoice extends "Sales Invoice"
                 }
             }
         }
-
     }
+    var
+        GenericCU: Codeunit GenericCU;
 }

@@ -71,7 +71,7 @@ page 70102 "Commissions Lines"
         }
     }
     var
-        CUCommissionCalculation: Codeunit CommissionCalcSub;
+        CUCommissionCalculation: Codeunit CommissionCalculations;
 
     trigger OnOpenPage()
     begin

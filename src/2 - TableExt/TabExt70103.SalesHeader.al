@@ -11,16 +11,4 @@ tableextension 70103 TabExtSalesHeader extends "Sales Header"
             FieldClass = FlowField;
         }
     }
-    procedure OpenSalespersonListEntries()
-    var
-        Salespersonlist: Record "Salespersons list";
-    begin
-        Salespersonlist.Reset();
-        Salespersonlist.SetRange("Customer No.", "Sell-to Customer No.");
-        if Salespersonlist.FindSet() then begin
-            Salespersonlist.SetCurrentKey("Customer No.");
-            PAGE.Run(70701, Salespersonlist);
-            //Page.RunModal(Page::"Salespersons List", Salespersonlist);
-        end;
-    end;
 }

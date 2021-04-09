@@ -1,5 +1,6 @@
 table 70103 TabCommissionRateSpec
 {
+    Caption = 'Sales Line Commission';
     fields
     {
         field(1; "Campagn No."; Code[20])
@@ -75,7 +76,7 @@ table 70103 TabCommissionRateSpec
         }
         field(10; "Commission %"; Decimal)
         {
-            Caption = 'Commission %';
+            Caption = 'Commission Rate';
         }
         field(11; "Created by"; Code[20])
         {
@@ -140,15 +141,15 @@ table 70103 TabCommissionRateSpec
         {
             Caption = 'Recalculate Comm. Min. Amount';
         }
-        field(26; "Recalc. Comm. Min. Amount Type"; Enum "Amount Type")
+        // 20210408 AM - to decide which field to use in future
+        /*field(26; "Recalc. Comm. Min. Amount Type"; Enum "Amount Type")
         {
             Caption = 'Recalc. Comm. Min. Amount Type';
-        }
-        // 20210408 AM - to decide which field to use in future
-        /*field(27; "Amount Type"; Enum "Amount Type")
-        {
-            Caption = 'Amount Type';
         }*/
+        field(27; "Amount Type"; Enum "Amount Type")
+        {
+            Caption = 'Minimum Amount Type';
+        }
         field(28; "Minimum Amount"; Decimal)
         {
             Caption = 'Minimum Amount';
@@ -177,7 +178,7 @@ table 70103 TabCommissionRateSpec
 
     keys
     {
-        key(Key1; "Campagn No.", "Customer Type", "Customer No.", "Ship-to Code", "Salesperson Code", "Entity Type", "Entity No.", "Starting Date", "Initial Rate", "Global Dimension 1 Code", "Global Dimension 2 Code", "Recalc. Comm. Min. Amount Type", "Minimum Amount")
+        key(Key1; "Campagn No.", "Customer Type", "Customer No.", "Ship-to Code", "Salesperson Code", "Entity Type", "Entity No.", "Starting Date", "Global Dimension 1 Code", "Global Dimension 2 Code", "Amount Type", "Minimum Amount")
         {
             Clustered = true;
         }

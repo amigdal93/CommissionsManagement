@@ -29,7 +29,7 @@ table 70101 "Salespersons list"
                 end;
             end;
         }
-        field(4; "Salesperson Name"; Text[100])
+        field(4; "Salesperson Name"; Text[50])
         {
             Caption = 'Salesperson Name';
             TableRelation = "Salesperson/Purchaser".Name;

@@ -86,7 +86,7 @@ table 70102 TabSalesInv_CommissLines
                 end;
             end;
         }
-        field(6; "Salesperson Name"; Text[100])
+        field(6; "Salesperson Name"; Text[50])
         {
             Caption = 'Salesperson Name';
             TableRelation = "Salesperson/Purchaser".Name;

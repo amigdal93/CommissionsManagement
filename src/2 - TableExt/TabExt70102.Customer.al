@@ -10,18 +10,4 @@ tableextension 70102 TabExtCustomer extends Customer
             FieldClass = FlowField;
         }
     }
-
-    procedure OpenSalespersonListEntries()
-    var
-        Salespersonlist: Record "Salespersons list";
-    begin
-        Salespersonlist.Reset();
-        Salespersonlist.SetRange("Customer No.", "No.");
-        if Salespersonlist.FindSet() then begin
-            PAGE.Run(70701, Salespersonlist);
-            Salespersonlist.SetCurrentKey("Customer No.");
-        end else begin
-            PAGE.Run(70701, Salespersonlist);
-        end;
-    end;
 }

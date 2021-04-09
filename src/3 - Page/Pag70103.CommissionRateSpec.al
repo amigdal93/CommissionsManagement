@@ -87,6 +87,14 @@ page 70103 PagCommissionRateSpec
                     ApplicationArea = All;
                     Visible = false;
                 }
+                field("Amount Type"; Rec."Amount Type")
+                {
+                    ApplicationArea = All;
+                }
+                field("Commission %"; Rec."Commission %")
+                {
+                    ApplicationArea = All;
+                }
                 field("Commission Rate Type"; Rec."Commission Rate Type")
                 {
                     ApplicationArea = All;
@@ -116,10 +124,6 @@ page 70103 PagCommissionRateSpec
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies whether the commissions are added to existing commissions or replaces existing commissions for transactions. This is only valid when ''Use only most specific'' is turned off in the setup.';
-                }
-                field("Commission %"; Rec."Commission %")
-                {
-                    ApplicationArea = All;
                 }
                 field("Created by"; Rec."Created by")
                 {
@@ -156,16 +160,12 @@ page 70103 PagCommissionRateSpec
                     ApplicationArea = All;
                     Visible = false;
                 }
-                field("Recalc. Comm. Min. Amount Type"; Rec."Recalc. Comm. Min. Amount Type")
+                // 20210408 AM - to decide which field to use in future
+                /*field("Recalc. Comm. Min. Amount Type"; Rec."Recalc. Comm. Min. Amount Type")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the type of the Minimum Amount';
                     Visible = false;
-                }
-                // 20210408 AM - to decide which field to use in future
-                /* field("Amount Type"; Rec."Amount Type")
-                {
-                    ApplicationArea = All;
                 } */
                 field("Salesperson Group"; Rec."Salesperson Group")
                 {

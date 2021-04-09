@@ -12,9 +12,10 @@ pageextension 70102 PagExtCustomerCard extends "Customer Card"
             field(Salespersons; Rec.Salespersons)
             {
                 ApplicationArea = All;
+
                 trigger OnDrillDown()
                 begin
-                    Rec.OpenSalespersonListEntries();
+                    GenericCU.OpenSalespersonListEntries(Rec."No.");
                 end;
             }
         }
@@ -58,10 +59,13 @@ pageextension 70102 PagExtCustomerCard extends "Customer Card"
                     CommissionRateSpecTab: Record TabCommissionRateSpec;
                 begin
                     CommissionRateSpecTab.SetRange("Customer No.", Rec."No.");
+                    CommissionRateSpecTab.SetRange("Ship-to Code", Rec."Ship-to Code");
                     CommissionRateSpecPag.SetTableView(CommissionRateSpecTab);
                     Page.Run(Page::PagCommissionRateSpec, CommissionRateSpecTab);
                 end;
             }
         }
     }
+    var
+        GenericCU: Codeunit GenericCU;
 }

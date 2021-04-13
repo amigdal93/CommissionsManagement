@@ -14,6 +14,7 @@ page 70100 PagSalesPersonClientItem
         {
             repeater(Control1)
             {
+
                 field(No; Rec."No.")
                 {
                     ApplicationArea = Basic, Suite;
@@ -35,11 +36,19 @@ page 70100 PagSalesPersonClientItem
                 {
                     ApplicationArea = Basic, Suite;
                 }
+                field("Salesperson Filter"; Rec."Salesperson Filter")
+                {
+                    ApplicationArea = Basic, Suite;
+                }
                 field(SalespersonCode; Rec."Salesperson Code")
                 {
                     ApplicationArea = Basic, Suite;
                 }
                 field(SalespersonName; Rec."Salesperson Name")
+                {
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Type Filter"; Rec."Type Filter")
                 {
                     ApplicationArea = Basic, Suite;
                 }

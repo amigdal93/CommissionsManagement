@@ -81,6 +81,15 @@ table 70100 TabSalesPersonClientItem
         {
             Caption = 'Line No.';
         }
+        // ADDED 13042021
+        field(10; "Salesperson Filter"; Enum "Salesperson Filters")
+        {
+            Caption = 'Salesperson Filter';
+        }
+        field(11; "Type Filter"; Enum "Type Filter")
+        {
+            Caption = 'Type Filter';
+        }
     }
 
     keys

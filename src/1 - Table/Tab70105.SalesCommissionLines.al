@@ -1,4 +1,4 @@
-table 70106 TabSalesCommissionLines
+table 70105 TabSalesCommissionLines
 {
     Caption = 'Sales Commission Lines';
 
